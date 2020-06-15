@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆失败</title>
+</head>
+<body>
+<div align="center">
+    <h1>登录失败</h1>
+    <p>密码或者用户名错误，还有<span style="color: red" id="time"></span>秒自动跳转</p>
+</div>
+</body>
+<script>
+    var time = document.getElementById("time");
+    var timeout = 4000;
+    var disn = 0
+    setInterval(function(){
+        time.innerHTML = 3-disn;
+        disn++;
+    },1000);
+    setTimeout(function(){
+        window.location.href = "login.html";
+    },timeout);
+</script>
+</html>
